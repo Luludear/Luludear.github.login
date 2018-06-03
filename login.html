@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>简单的登录界面</title>
+</head>
+
+<style type="text/css">
+     body{
+     	margin: 0;
+     	padding: 0;
+     	
+     }
+     div{
+     	background-color: #ec95db;
+     	width: 400px;
+     	height: 200px;	
+     	opacity: 0.4;
+     	margin:50px  auto;
+     	padding-top: 20px;	
+     	text-align: center;
+     }
+	p{
+		
+		font-size: 20px;
+		color: #cfcfcf;
+	
+	}
+	input{
+		margin-top: 5px;
+	}
+	#btn{
+		border-radius: 10px;
+		margin-top: 10px;
+	}
+
+</style>
+<body>
+	<div>
+		<p>用户登录</p>
+		<form>
+用户名：<input type="text" name="User" id="User" /><br/>
+密&nbsp&nbsp 码：<input type="password" name="Upwd" id="Upwd" /><br/>
+<input type="button" name="submit" id="btn" value="登录" /></form>
+</div>
+<script type="text/javascript">
+	window.onload=function(){
+		var OUser=document.getElementById('User');
+		var OUpwd=document.getElementById('Upwd');
+		var Obtn=document.getElementById('btn');
+
+		btn.onclick=function(){
+			if (OUser.value=='123'&&OUpwd.value=='123') {
+				alert('恭喜你，登陆成功！')
+			}else if(OUser.value=='123'&&OUpwd.value!='123'){
+				alert('请输入正确的密码！')
+				OUser.value='';
+				OUpwd.value='';
+
+			}else {
+				alert('账户密码不匹配。')
+				OUser.value='';
+				OUpwd.value='';
+			}
+
+		}
+
+	}
+</script>
+</body>
+</html>
